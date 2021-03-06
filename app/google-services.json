@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "622345757355",
+    "project_id": "wander-ab0bd",
+    "storage_bucket": "wander-ab0bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622345757355:android:3e03761c2179f7948c0dee",
+        "android_client_info": {
+          "package_name": "com.mysticslice.wander"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "622345757355-rer37d8pcbeim6vfc6fq98q5el6vhjh1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mysticslice.wander",
+            "certificate_hash": "6352bd671165201e97dc16b9e6c13eb3df093142"
+          }
+        },
+        {
+          "client_id": "622345757355-k20tr3b9avfuiamb6lf5v6kmi0mcl32e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSW4tKfxSGcTurESikPSlUokoCLiv-hKc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "622345757355-k20tr3b9avfuiamb6lf5v6kmi0mcl32e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
