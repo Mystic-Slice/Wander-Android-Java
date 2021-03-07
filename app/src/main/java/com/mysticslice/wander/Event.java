@@ -14,6 +14,10 @@ public class Event {
     private String mDay;
     private String mCategory;
 
+    public Event(){
+
+    }
+
     /**
      * Object containing all info about an event
      * @param EventName Name of the event
@@ -21,22 +25,29 @@ public class Event {
      * @param Date Date of event
      * @param Url Url of the event website
      */
-    public Event(String EventName, String Location, String Date,String Category, String Url){
+    public Event(String EventName, String Location, String Date,String Category, String Url,String Day){
         mEventName = EventName;
         mLocation = Location;
         mDate = Date;
         mUrl = Url;
         mCategory = Category;
 
-        try{
-            SimpleDateFormat format1=new SimpleDateFormat("dd/MM/yyyy");
-            Date dt1 = format1.parse(Date);
-            DateFormat format2=new SimpleDateFormat("EE");
-            mDay =format2.format(dt1);
-        }catch (ParseException e){
-            e.printStackTrace();
-            mDay = "Error";
+        if(Day == null){
+            try{
+                SimpleDateFormat format1=new SimpleDateFormat("dd/MM/yyyy");
+                Date dt1 = format1.parse(Date);
+                DateFormat format2=new SimpleDateFormat("EE");
+                mDay =format2.format(dt1);
+            }catch (ParseException e){
+                e.printStackTrace();
+                mDay = "Error";
+            }
         }
+        else{
+            mDay = Day;
+        }
+
+
 
     }
 

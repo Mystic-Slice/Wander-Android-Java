@@ -5,9 +5,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.concurrent.TimeUnit;
 
 public class AddEventActivity extends AppCompatActivity {
     EditText eventNameView;
@@ -36,12 +39,12 @@ public class AddEventActivity extends AppCompatActivity {
                 eventDateView = findViewById(R.id.et_add_event_date);
                 mEventDate = eventDateView.getText().toString();
 
-                Event addedEvent = new Event(mEventName,mEventLocation,mEventDate,"Drama","google.com");
+                Event addedEvent = new Event(mEventName,mEventLocation,mEventDate,"Drama","google.com",null);
 
                 mfireBaseUtils.pushIntoDatabase(addedEvent);
-                TextView mTextView = findViewById(R.id.display);
-                mTextView.setText(addedEvent.getEventName()+" "+addedEvent.getLocation()+" "+addedEvent.getDate());
+                Toast.makeText(AddEventActivity.this,"Event Added",Toast.LENGTH_SHORT).show();
 
+                finish();
             }
         });
     }

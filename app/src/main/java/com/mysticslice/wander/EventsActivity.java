@@ -9,6 +9,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 
 public class EventsActivity extends AppCompatActivity {
@@ -16,21 +18,13 @@ public class EventsActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events);
-        final ArrayList<Event> events = new ArrayList<Event>();
-        events.add(new Event("SF hacks - Hackathon","R S Puram", "05/03/2021","something.com",null));
-        events.add(new Event("SF hacks - Hackathon","R S Puram", "10/03/2021","something.com",null));
-        events.add(new Event("SF hacks - Hackathon","R S Puram", "15/03/2021","something.com",null));
-        events.add(new Event("SF hacks - Hackathon","R S Puram", "25/03/2021","something.com",null));
-        events.add(new Event("SF hacks - Hackathon","R S Puram", "05/03/2021","something.com",null));
-        events.add(new Event("SF hacks - Hackathon","R S Puram", "05/03/2021","something.com",null));
-        events.add(new Event("SF hacks - Hackathon","R S Puram", "05/03/2021","something.com",null));
-        events.add(new Event("SF hacks - Hackathon","R S Puram", "05/03/2021","something.com",null));
-        events.add(new Event("SF hacks - Hackathon","R S Puram", "05/03/2021","something.com",null));
-        events.add(new Event("SF hacks - Hackathon","R S Puram", "05/03/2021","something.com",null));
-        events.add(new Event("SF hacks - Hackathon","R S Puram", "05/03/2021","something.com",null));
-        events.add(new Event("SF hacks - Hackathon","R S Puram", "05/03/2021","something.com",null));
+        ArrayList<Event> events = new ArrayList<Event>();
+
+        FireBaseUtils firebaseUtils = new FireBaseUtils();
 
         EventAdapter adapter = new EventAdapter(this,events);
+
+        events = firebaseUtils.getFromDatabase(adapter,events);
 
         ListView listView = (ListView) findViewById(R.id.list);
 
