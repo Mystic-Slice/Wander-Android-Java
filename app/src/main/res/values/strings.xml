@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Wander</string>
+    <string-array name="categories_array">
+        <item>Stand-up</item>
+        <item>Music</item>
+    </string-array>
 </resources>

@@ -18,14 +18,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="date"/>
+    <Spinner
+        android:id="@+id/sp_add_categories"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/et_add_event_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="url"/>
     <Button
         android:id="@+id/bt_add_addevent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add"/>
-    <TextView
-        android:id="@+id/display"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+
 
 </LinearLayout>
