@@ -1,37 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <EditText
         android:id="@+id/et_add_event_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Event Name"/>
+        android:layout_width="@dimen/edit_view_width"
+        android:layout_height="@dimen/edit_view_height"
+        android:hint="Event Name"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"/>
     <EditText
         android:id="@+id/et_add_event_location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Location"/>
+        android:layout_width="@dimen/edit_view_width"
+        android:layout_height="@dimen/edit_view_height"
+        android:hint="Location"
+        android:layout_gravity="center_horizontal"/>
     <EditText
         android:id="@+id/et_add_event_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="date"/>
+        android:layout_width="@dimen/edit_view_width"
+        android:layout_height="@dimen/edit_view_height"
+        android:hint="Date"
+        android:layout_gravity="center_horizontal"/>
     <Spinner
         android:id="@+id/sp_add_categories"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content" />
+        android:layout_width="@dimen/edit_view_width"
+        android:layout_height="@dimen/edit_view_height"
+        android:layout_gravity="center_horizontal"/>
     <EditText
         android:id="@+id/et_add_event_url"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="url"/>
+        android:layout_width="@dimen/edit_view_width"
+        android:layout_height="@dimen/edit_view_height"
+        android:hint="URL"
+        android:layout_gravity="center_horizontal"/>
     <Button
         android:id="@+id/bt_add_addevent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add"/>
+        android:layout_width="@dimen/edit_view_width"
+        android:layout_height="@dimen/edit_view_height"
+        android:text="@string/add_event_button"
+        android:layout_margin="10dp"
+        android:backgroundTint="#3271A8"
+        android:layout_gravity="center_horizontal"/>
 
 
 </LinearLayout>

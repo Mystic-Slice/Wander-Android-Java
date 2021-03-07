@@ -20,6 +20,7 @@ public class EventsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.Theme_Wander);
         setContentView(R.layout.activity_events);
 
 

@@ -48,6 +48,7 @@ public class AddEventActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.Theme_Wander);
         setContentView(R.layout.activity_add_event);
 
         // implementing spinner for the categories
@@ -78,7 +79,7 @@ public class AddEventActivity extends AppCompatActivity {
                 Event addedEvent = new Event(mEventName, mEventLocation, mEventDate, mCategory, mEventUrl, null);
 
                 mfireBaseUtils.pushIntoDatabase(addedEvent);
-                Toast.makeText(AddEventActivity.this, "Event Added", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddEventActivity.this, "Event Added", Toast.LENGTH_LONG).show();
 
                 finish();
             }

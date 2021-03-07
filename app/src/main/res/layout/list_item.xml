@@ -6,19 +6,18 @@
     android:orientation="horizontal">
 
     <ImageView
-        android:id="@+id/iv_event_image"
+        android:id="@+id/iv_category_image"
         android:layout_width="@dimen/event_image"
         android:layout_height="match_parent"
         android:padding="5dp"
         android:src="@drawable/ic_launcher_background"
-        android:layout_centerVertical="true"
-        android:background="@color/teal_200"/>
+        android:layout_centerVertical="true"/>
     <LinearLayout
         android:id="@+id/ll_event"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_toRightOf="@+id/iv_event_image"
+        android:layout_toRightOf="@+id/iv_category_image"
         android:layout_marginLeft="5dp">
 
         <TextView
@@ -36,7 +35,8 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:text="Location"
-            android:textSize="15sp"/>
+            android:textSize="15sp"
+            android:gravity="bottom"/>
 
     </LinearLayout>
 
@@ -62,21 +62,10 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_gravity="end"
+            android:gravity="bottom"
             android:text="date"
             android:textSize="15dp"
-            android:layout_weight="1"/>
-        <ImageView
-            android:id="@+id/iv_event_type"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:src="@drawable/ic_launcher_background"
-            android:layout_gravity="end"
-            android:layout_weight="1"/>
-
-
+            android:layout_weight="1"
+            />
     </LinearLayout>
-
-
-
-
 </RelativeLayout>
