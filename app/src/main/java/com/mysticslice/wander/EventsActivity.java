@@ -1,5 +1,7 @@
 package com.mysticslice.wander;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,11 +16,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 public class EventsActivity extends AppCompatActivity {
+    ArrayList<Event> events = new ArrayList<Event>();
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events);
-        ArrayList<Event> events = new ArrayList<Event>();
+
 
         FireBaseUtils firebaseUtils = new FireBaseUtils();
 
@@ -33,8 +36,10 @@ public class EventsActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(EventsActivity.this,"The list item clicked is at position "+String.valueOf(position)
-                        ,Toast.LENGTH_SHORT).show();
+                Event currentEvent = events.get(position);
+                Uri eventUrl = Uri.parse(currentEvent.getUrl());
+                Intent websiteIntent = new Intent(Intent.ACTION_VIEW, eventUrl);
+                startActivity(websiteIntent);
             }
         });
     }

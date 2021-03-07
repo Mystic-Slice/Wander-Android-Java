@@ -46,7 +46,6 @@ public class EventAdapter extends ArrayAdapter<Event> {
         eventDay.setText(currentEvent.getDay());
 
 
-
         return listItemView;
     }
 }
